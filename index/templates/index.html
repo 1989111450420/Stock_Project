@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="{% static 'css/index.css' %}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/jQuery-3.3.1.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+  </head>
+  <body>
+
+<div class="container">
+  <!-- Search form -->
+  <form action="/index/" method="post">
+    {% csrf_token %}
+    <div class="active-cyan-3 active-cyan-4 mb-4" style="background-color:lavender;
+        margin-bottom:40px; border-radius:10px;">
+        <span style="font-size:33px; margin-right:300px; margin-left:10px; color:#4D4B08">股票資訊分析網</span>
+        <span style="font-size:18px; margin-right:10px;"><a href="#">股票代號/名稱</a></span>
+        <span style="font-size:18px; margin-right:10px;"><a href="#">{{search_no}}</a></span>
+        <input class="set-form-control" type="text" placeholder="Search" name="search_no" aria-label="Search">
+    </div>
+  </form>
+
+  <a href="{% url 'logout' %}"><button type="button" class="btn">登出</button></a>
+  <a href="{% url 'register' %}"><button type="button" class="btn btn-default">註冊</button></a>
+  <a href="http://www.cnyes.com/twfutures/index.htm"><button type="button" class="btn btn-primary">台股</button></a>
+  <a href="https://www.cnyes.com/global/IndexImmediateQuotedPrice/"><button type="button" class="btn btn-success">全球市場</button></a>
+  <a href="https://fund.cnyes.com/"><button type="button" class="btn btn-info">基金</button></a>
+  <a href="{% url 'register' %}"><button type="button" class="btn btn-warning">討論版</button></a>
+  <a href="https://www.cnyes.com/forex/"><button type="button" class="btn btn-danger">外匯</button></a>
+</div>
+
+<div class="container" style="margin-top:40px;">
+  <h1><a href="https://www.ettoday.net/news/20190604/1460228.htm">
+    中美貿易戰衝突加劇　京城銀短期投資損益受衝擊</a></h1>
+  <h4>京城銀於今（4）日公告，今年5月稅後純益為3.59億元，較4月的4.65下滑，</h4>
+  <h4>也去年同期減少-2.7%，累計前5月稅後純益26.52億元，就去年同期增長38.3%，每股稅後純益（EPS）2.32元...</h4>
+
+  <h2>台股指數</h2>
+  <p>本日最佳三檔:台積電、大立光、南亞科</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>收盤價</th>
+        <th>漲跌幅</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>台積電</td>
+        <td>260</td>
+        <td>+6%</td>
+      </tr>
+      <tr>
+        <td>大立光</td>
+        <td>4200</td>
+        <td>+4%</td>
+      </tr>
+      <tr>
+        <td>南亞科</td>
+        <td>70</td>
+        <td>+3%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+  <h2>財經新聞</h2>
+  <p>Use the contextual background classes to provide "meaning through colors":</p>
+  <p class="bg-primary">This text is important.</p>
+  <p class="bg-success">This text indicates success.</p>
+  <p class="bg-info">This text represents some information.</p>
+  <p class="bg-warning">This text represents a warning.</p>
+  <p class="bg-danger">This text represents danger.</p>
+</div>
+
+<div class="container">
+  <h2>國際金融</h2>
+  <div class="row">
+    <ul>
+        <div class="col-md-4" id="div_asia">
+          <div class="thumbnail">
+            <a href="//www.cnyes.com/global/astock/flashchart.aspx?area=JP&code=NKY" target="_blank">
+              <img src="{% static 'images/4.jpg' %}" alt="Lights" style="width:100%; height:224.44px;">
+              <div class="caption">
+                <p style="font-size:18px;">日經225指數　JP-NKY</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="//www.cnyes.com/usastock/stocks/INDU.html" target="_blank">
+              <img src="{% static 'images/1.jpg' %}" alt=v"Nature" style="width:100%;  height:224.44px;">
+              <div class="caption">
+                <p style="font-size:18px;">道瓊工業平均指數-INDU</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="//www.cnyes.com/usastock/stocks/SPX.html" target="_blank">
+            <img src="{% static 'images/2.jpg' %}" alt="Fjords" style="width:100%;">
+            <div class="caption">
+              <p style="font-size:18px;">美國S&P 500指數-SPX</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

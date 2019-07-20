@@ -1,0 +1,63 @@
+{% extends 'login.html' %}
+{% load static %}
+
+{% block style %}
+	<link rel="stylesheet" type="text/css" 
+	 href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block title %}
+會員註冊
+{% endblock %}
+
+{% block container>h2 %}
+會員註冊
+{% endblock %}
+
+{% block container>p %}
+<a href="{% url 'login' %}">會員登錄&gt;</a>
+{% endblock %}
+
+{% block form %}
+<form action="/register/" method="post">
+	{% csrf_token %}
+	<div class="form-line">
+		<p>手機號:</p>
+		<div>
+			<input type="text" name="uphone" class="form-setting">
+			<p id="uphone_err">{{errMsg}}</p>
+		</div>
+	</div>
+	<div class="form-line">
+		<p>密碼:</p>
+		<div>
+			<input type="password" name="upwd" class="form-setting">
+		</div>
+	</div>
+	<div class="form-line">
+		<p>確認密碼:</p>
+		<div>
+			<input type="password" id="cpwd" class="form-setting">
+		</div>
+	</div>
+	<div class="form-line">
+		<p>用戶名稱:</p>
+		<div>
+			<input type="text" name="uname" class="form-setting">
+		</div>
+	</div>
+	<div class="form-line">
+		<p>郵箱:</p>
+		<div>
+			<input type="email" name="uemail" class="form-setting">
+		</div>
+	</div>
+	<div class="form-line">
+		<p></p>
+		<div>
+			<a href="{% url 'login' %}" class="login">會員登錄</a>
+			<input type="submit" value="註冊" class="btnlogin">
+		</div>
+	</div>	
+</form>
+{% endblock %}

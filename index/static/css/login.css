@@ -1,0 +1,108 @@
+body,h1,h2,h3,h4,h5,h6,p{
+	margin:0;
+}
+#container{
+	width:990px;
+	margin:20px auto;
+}
+#container h2.title{
+	color:#adadad;
+	border-bottom:1px solid #adadad;
+	padding-bottom:20px;
+	font-weight:normal;
+	margin-bottom:25px;
+}
+#container>p{
+	float:left;
+	position:relative;
+}
+#container>p>a{
+	position:absolute;
+	left:220px;
+	bottom:-50px;
+	width:130px;
+	height:40px;
+	border:1px solid #64a131;
+	box-sizing:border-box;
+	border-radius:5px;
+	text-align:center;
+	line-height:40px;
+	text-decoration:none;
+	color:#64a131;
+	font-size:18px;
+}
+#container>p>img{
+	width:600px;
+}
+#login{
+	float:right;
+	margin-top:75px;
+}
+#login .form-line{
+	overflow:hidden;
+	margin-bottom:25px;
+}
+#login .form-line>p{
+	float:left;
+	margin:0px;
+	color:#999;
+	width:70px;
+	text-align:right;
+	margin-right:42px;
+	line-height:40px;
+	height:40px;
+}
+#login .form-line>div{
+	float:left;
+	width:250px;
+}
+#login .form-control{
+	box-sizing:border-box;
+	width:250px;
+	height:40px;
+	border:1px solid #ccc;
+	padding-left:10px;
+	outline:none;
+}
+#login .form-control:focus{
+	border-color:#64a131;
+	box-shadow:0 0 2px #64a131;
+}
+#login .form-line>div>p{
+	float:right;
+}
+#login .form-line>div>p a{
+	color:#999;
+}
+#login .form-line .is_saved{
+	width:20px;
+	height:20px;
+	vertical-align:middle;
+}
+#login .form-line a.register{
+	float:right;
+	width:120px;
+	height:40px;
+	border:1px solid #64a131;
+	border-radius:5px;
+	text-align:center;
+	line-height:40px;
+	color:#64a131;
+	font-size:18px;
+	text-decoration:none;
+	box-sizing:border-box;
+}
+#login .form-line .btnlogin{
+	width:120px;
+	height:40px;
+	border:none;
+	outline:none;
+	background:#64a131;
+	border-radius:5px;
+	color:#fff;
+	font-size:18px;
+	box-sizing:border-box;
+}
+#uphone_err{
+	margin-top:10px;
+}
